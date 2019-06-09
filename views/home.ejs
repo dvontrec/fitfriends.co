@@ -47,12 +47,29 @@
     .hero-text h2{
       word-wrap: break-word;
     }
+
+    .fit-logo {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+        /* Bottom left text */
+    .bottom-left {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
   </style>
 </head>
 <body>
   <div class="hero-image">
     <div class="hero-text container">
+      <div class="fit-logo">
         <img src="logo.png" alt="fit friendz logo" class="img-fluid"/>
+        <div class="bottom-left"><h2>Get fit while you build a community</h2></div>
+      </div>
         <h2 style="font-weight: bold">
           Enter your email to join <strong><%= numUsers %></strong> other Fit Friendz
         </h2>
