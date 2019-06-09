@@ -53,12 +53,18 @@
       color: white;
       }
 
-          /* Bottom left text */
+      /* Bottom left text */
       .bottom-left {
         position: absolute;
         top: 80%;
         left: 50%;
         transform: translate(-50%, 0%);
+      }
+
+      @media (max-width: 800px){
+        .bottom-left{
+          display: none;
+        }
       }
     </style>
   </head>
@@ -67,7 +73,7 @@
       <div class="hero-text container">
           <div class="fit-logo">
             <img src="logo.png" alt="fit friendz logo" class="img-fluid"/>
-            <div class="bottom-left"><h1>CONGRATS!</h1></div>
+            <div class="bottom-left col-md-12 col-xs-0"><h1>CONGRATS!</h1></div>
           </div>
           <h2 style="font-weight: bold">
             You are now waiting with <strong><%= numUsers - 1 %></strong> other Fit Friendz
