@@ -1,12 +1,16 @@
 require('dotenv').config()
 const EXPRESS = require('express');
 const bodyParser = require('body-parser');
+const favicon = require('serve-favicon');
 const mysql = require('mysql');
 const app = EXPRESS();
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(EXPRESS.static("public"));
+app.use(favicon(__dirname + '/public/favicon.ico'));
+
+// app.use(EXPRESS.favicon("logo2.png"));
 //creates a connection to the mySQL database
 let connection = mysql.createConnection(
   {
