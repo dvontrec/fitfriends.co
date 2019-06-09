@@ -1,0 +1,64 @@
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Fit Friendz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* body {
+        height: 100%;
+      } */
+      .hero-image {
+        /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+        background-image: url('background.png');
+  
+        /* Set a specific height */
+        min-height: 100vh;
+        min-width: 100vw;
+  
+        /* Position and center the image to scale nicely on all screens */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: fixed;
+      }
+      .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* color: #ef740e; */
+        color: #ffffff;
+        text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em white;
+        padding-bottom: 33vh;
+      }
+      .hero-text h2{
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero-image">
+      <div class="hero-text container">
+          <img src="logo.png" alt="fit friendz logo" class="img-fluid"/>
+          <h1>CONGRATS!</h1>
+          <h2 style="font-weight: bold">
+            You are now waiting with <strong><%= numUsers - 1 %></strong> other Fit Friendz
+          </h2>
+        </div>
+      </div>
+    </div>
+  </body>
+  

@@ -38,8 +38,19 @@ app.post('/register', (req, res) => {
   // inserts the person into the users setting values to be matching
   connection.query('INSERT INTO users SET ?', person, (err, result) => {
     if (err) throw err;
-    res.redirect('/');
+    return res.redirect('/success');
   });
+})
+
+app.get('/success', (req, res) => {
+  // find number of users
+  const query = 'SELECT COUNT(*) AS count FROM users';
+  connection.query(query, (error, results, fields) => {
+    if (error) throw error;
+    const numUsers = results[0].count;
+    // Respond with total
+    res.render('success', { numUsers });
+  })
 })
 
 
